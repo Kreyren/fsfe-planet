@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="PLANETLANG" xml:lang="PLANETLANG">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-language" content="PLANETLANG" />
+<meta name="author" content="fellowship fsfeurope org" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="alternate" type="application/rss+xml" title="Fellowship of FSFE - Planet" href="http://planet.fsfe.org/PLANETLANG/rss20.xml" />
+
+<link rel="stylesheet" href="http://planet.fsfe.org/style.css" type="text/css" />
+<link rel="stylesheet" href="http://planet.fsfe.org/planet.css" type="text/css" />
+<link rel="Shortcut icon" href="http://planet.fsfe.org/favicon.ico" type="image/x-icon" />
+
+<title>Planet - Fellowship of FSFE</title>
+
+<!--[if lt IE 7]>
+<script defer type="text/javascript" src="http://test.fsfe.org/pngfix.js"></script>
+
+<style type="text/css" media="screen">
+#content {
+	margin-top: -4px;
+}
+</style>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<style type="text/css" media="screen">
+
+#text-top { width: 94%; }
+
+.collumnleft, .collumnright {
+	width: 41.5%;
+}
+
+#newsblog { width: 99%; }
+
+#news {
+	width: 57%
+}
+
+#blog { 
+	width: 38%;
+	margin-right: 1.2%;
+}
+
+</style>
+<![endif]-->
+
+</head>
+
+<body>
+
+<div id="wrapper">
+<div id="inner-wrapper">
+
+<div id="top">
+	<ul id="topright">
+		<!--<li><a href="sitemap.html" title="sitemap" class="edge">site map</a></li>
+		<li><a href="login.html" class="special edge" title=""  class="edge">login</a></li>-->
+		<li><a href="http://fellowship.fsfe.org/join" title="Join the Fellowship!" class="edge">join</a></li>
+		<li><a href="http://fellowship.fsfe.org/contact" title="">contact</a></li>
+	</ul>
+
+	<ul id="topleft">
+		<li><a href="http://fellowship.fsfe.org/" title="The Fellowship of FSFE" class="edge">home</a></li>
+		<li><a href="http://wiki.fsfe.org/" title="Fellowship Wiki" class="edge">wiki</a></li>
+		<!-- <li><a href="http://blogs.fsfe.org/" title="Fellowship Blogs" class="edge">blogs</a></li> -->
+		<li><a href="http://planet.fsfe.org/" title="Fellowship Planet" class="active">planet</a></li>
+	</ul>
+
+<a href="http://fellowship.fsfe.org/" title="Home The Fellowship - Fellowship of FSFE" id="logo"></a>
+
+</div><!-- end top -->
+
+
+<div id="contenttop">
+	<div>
+	</div>
+</div><!-- end contenttop -->
+
+<div id="content">
+
+<div id="menu">
+	<div id="menuinner">
+
+	<h2 class="top">Planets in:</h2>
+	<ul class="language">
+	<!-- <li><a href="http://planet.fsfe.org/da/" title="">Dansk</a></li> -->
+	<li><a href="http://planet.fsfe.org/de/" title="">Deutsch</a></li>
+	<li><a href="http://planet.fsfe.org/en/" title="">English</a></li>
+	<li><a href="http://planet.fsfe.org/es/" title="">Espa&ntilde;ol</a></li>
+	<li><a href="http://planet.fsfe.org/fr/" title="">Fran&ccedil;ais</a></li>
+	<li><a href="http://planet.fsfe.org/it/" title="">Italiano</a></li>
+	<!-- <li><a href="http://planet.fsfe.org/nl/" title="">Nederlands</a></li> -->
+	<li><a href="http://planet.fsfe.org/gmq/" title="">Nordic</a></li>
+	<li><a href="http://planet.fsfe.org/no/" title="">Norsk</a></li>
+	<li><a href="http://planet.fsfe.org/fi/" title="">Suomi</a></li>
+	<!-- <li><a href="http://planet.fsfe.org/sl/" title="">Sloven&#353;&#269;ina</a></li> -->
+	<li><a href="http://planet.fsfe.org/sv/" title="">Svenska</a></li>
+	</ul>
+
+	<a href="http://www.fsfe.org/" title="FSFE" id="fsfelogo"></a>
+
+	<!--div id="feeddiv">
+ 	<h2>People Aggregated</h2> 	
+	<p>
+ 	__feeds__
+ 	</p>
+ 	</div--><!--feeddiv--> 
+
+	</div><!-- end menuinner -->
+</div><!-- end menu -->
+
+<div id="text">
+	<h1><TMPL_VAR name></h1>
+
+	<div class="blogitem" align="center">
+	<p><a href="http://planet.fsfe.org/PLANETLANG/rss20.xml"><img src="/images/feed.png" alt="" /> RSS 2.0</a> | <a href="http://planet.fsfe.org/PLANETLANG/atom.xml"><img src="/images/feed.png" alt="" /> Atom</a> | <a href="http://planet.fsfe.org/PLANETLANG/foafroll.xml"><img src="/images/foaf.png" alt="" /> FOAF</a> | <a href="http://planet.fsfe.org/PLANETLANG/opml.xml"><img src="/images/opml.png" alt="" /></a></p>
+	</div>
+
+
+
+<TMPL_LOOP Items>
+	<TMPL_IF new_date>
+		<TMPL_UNLESS __FIRST__>
+		### End <div class="daygroup">
+		</div>
+		</TMPL_UNLESS>
+		<div class="daygroup">
+		<h2><TMPL_VAR new_date></h2>
+	</TMPL_IF>
+	
+	<div class="blogitem">
+	<TMPL_IF title>
+		<h2>
+		<a href="<TMPL_VAR link ESCAPE="HTML">" class="blogtitle"><TMPL_VAR title></a> 
+		<TMPL_IF channel_face>
+		<img class="face" src="/faces/<TMPL_VAR channel_face ESCAPE="HTML">" width="<TMPL_VAR channel_facewidth ESCAPE="HTML">" height="<TMPL_VAR channel_faceheight ESCAPE="HTML">" alt="" style="float:right;" />
+		</TMPL_IF>
+		</h2>
+	</TMPL_IF>
+		<p>
+		<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a> | <TMPL_VAR date>
+		</p>
+	<TMPL_VAR content>
+	</div>
+
+	<TMPL_IF __LAST__>
+	### End <div class="daygroup">
+	</div>
+	</TMPL_IF>
+</TMPL_LOOP>
+
+
+
+
+<div class="blogitem" align="center">
+	<p>
+	<TMPL_VAR name>: <a href="http://planet.fsfe.org/PLANETLANG/rss20.xml"><img src="/images/feed.png" alt="" /> RSS 2.0</a> | <a href="http://planet.fsfe.org/PLANETLANG/atom.xml"><img src="/images/feed.png" alt="" /> Atom</a> | <a href="http://planet.fsfe.org/PLANETLANG/foafroll.xml"><img src="/images/foaf.png" alt="" /> FOAF</a> | <a href="http://planet.fsfe.org/PLANETLANG/opml.xml"><img src="/images/opml.png" alt="" /></a>
+	</p>
+	<p>
+	<TMPL_LOOP Channels>
+	<img src="/images/feed.png" alt="" /> <a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a>&nbsp;
+	</TMPL_LOOP>
+	</p>
+</div>
+
+
+
+<div id="footer">
+	<address></address>
+	
+	<p>
+	</p>
+
+	<p>
+	Planet Fellowship is a blog aggregator; the opinions expressed here do not
+	constitute a statement by the <a href="http://www.fsfe.org">FSFE</a>.
+	Please report problems with this page to webmaster at fsfeurope.org.
+	</p>
+	<p>
+	Powered by: 
+	<a href="http://intertwingly.net/code/venus/"><img src="/images/venus.png" border="0" alt="" /></a>
+	</p>
+
+</div><!-- end footer -->
+
+</div><!-- end text -->
+</div><!-- end content -->
+
+<div id="contentbottom">
+	<div>
+	</div>
+</div><!-- end contentbottom -->
+
+</div><!-- end inner-wrapper -->
+</div><!-- end wrapper -->
+
+</body>
+</html>

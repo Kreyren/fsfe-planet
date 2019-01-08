@@ -1,0 +1,21 @@
+# Clear planets cache (weekly)
+5  0      * * 7   venus     /home/venus/bin/planet_expunge.sh 2>&1 | tee -a /home/venus/planet.log
+
+# English and German planets (take a bit more time)
+5  1-23   * * *   venus     planet /home/venus/lang/en/planet_en.ini  2>&1 | tee -a /home/venus/planet.log
+20 1-23   * * *   venus     planet /home/venus/lang/de/planet_de.ini  2>&1 | tee -a /home/venus/planet.log
+
+# Other national planets
+30 1-23   * * *   venus     planet /home/venus/lang/it/planet_it.ini  2>&1 | tee -a /home/venus/planet.log
+33 1-23   * * *   venus     planet /home/venus/lang/es/planet_es.ini  2>&1 | tee -a /home/venus/planet.log
+36 1-23   * * *   venus     planet /home/venus/lang/eo/planet_eo.ini  2>&1 | tee -a /home/venus/planet.log
+39 1-23   * * *   venus     planet /home/venus/lang/fr/planet_fr.ini  2>&1 | tee -a /home/venus/planet.log
+42 1-23   * * *   venus     planet /home/venus/lang/nl/planet_nl.ini  2>&1 | tee -a /home/venus/planet.log
+45 1-23   * * *   venus     planet /home/venus/lang/sl/planet_sl.ini  2>&1 | tee -a /home/venus/planet.log
+
+# Nordic planets
+48 1-23   * * *   venus     planet /home/venus/lang/da/planet_da.ini  2>&1 | tee -a /home/venus/planet.log
+51 1-23   * * *   venus     planet /home/venus/lang/fi/planet_fi.ini  2>&1 | tee -a /home/venus/planet.log
+54 1-23   * * *   venus     planet /home/venus/lang/no/planet_no.ini  2>&1 | tee -a /home/venus/planet.log
+57 1-23   * * *   venus     planet /home/venus/lang/sv/planet_sv.ini  2>&1 | tee -a /home/venus/planet.log
+59 1-23   * * *   venus     planet /home/venus/lang/gmq/planet_gmq.ini 2>&1 | tee -a /home/venus/planet.log

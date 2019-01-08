@@ -1,0 +1,1 @@
+s|PLANETLANG|de|g

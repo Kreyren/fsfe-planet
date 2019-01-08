@@ -1,0 +1,110 @@
+.blogitem p a, .blogitem ul li a {
+color:#3394ce;
+}
+.blogitem p a:hover, .blogitem ul li a:hover {
+color:#236892;
+}
+.blogitem p.comment {
+color:#3E6400;
+font-size:0.8em;
+font-weight:bold;
+text-decoration:none;
+}
+.blogitem p.comment a, p.comment a:visited {
+color:#3E6400;
+font-weight:bold;
+text-decoration:none;
+}
+.blogitem p.comment a:hover {
+color:#9EBB70;
+font-weight:bold;
+text-decoration:none;
+}
+.blogitem h2 a {
+color:#000000;
+font-size: 1.4em;
+line-height: 1.4em;
+}
+/*
+.blogitem h2 a:hover {
+color:#868686;
+}
+*/
+li span {
+background:none;
+}
+
+input#show-menu {
+    display: none;
+}
+
+.show-menu {
+    cursor: pointer;
+    padding-left: 5px;
+    font-size: 16px;
+    color: #3394ce;
+    background: transparent;
+    text-decoration: none;
+}
+
+.show-menu:hover {
+	color: #236892;
+}
+
+input[type=checkbox]:checked ~ #languages{
+    display: block;
+}
+
+ul#languages {
+	position: relative;
+	width: 100%;
+	background: white;
+	display: none;
+        padding-top: 0px;
+	box-shadow: 0 .4em 1em #c8c8c8;
+	z-index: 100;
+}
+
+
+.show-menu {
+	display:block;
+}
+
+#languages a:hover {
+	border-bottom: none;
+}
+
+#languages li a {
+	display: block;
+        position: relative;
+	line-height: 2em;
+}
+
+.fa {
+	padding-right: 0.3em;
+}
+
+.motto {
+    position:relative;
+    width: 100%;
+    background-image: url(/images/motto.jpg);
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.motto-text {
+    color: white;
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 100px;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.5em;
+    /*font-family: 'GNUTypewriter',"Inconsolata",Inconsolata,Menlo,Monaco,Consolas,"Courier New",monospace;*/
+}
+
+
+
