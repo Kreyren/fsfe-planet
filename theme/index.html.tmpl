@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="PLANETLANG" xml:lang="PLANETLANG">
-
+<!-- fsfe rev 1 -->
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en">
 <head>
+<title>Planet - Free Software Foundation Europe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-language" content="PLANETLANG" />
@@ -12,57 +12,22 @@
 <meta name="keywords" content="" />
 <link rel="alternate" type="application/rss+xml" title="Planet FSFE" href="/PLANETLANG/rss20.xml" />
 
-<link rel="stylesheet" href="/design/style.css" type="text/css" />
+<link href="https://fsfe.org/look/fsfe.min.css" rel="stylesheet" media="all" type="text/css">
+<link href="https://fsfe.org/look/print.css" rel="stylesheet" media="print" type="text/css">
+<link href="https://fsfe.org/graphics/fsfe.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" href="/design/planet.css" type="text/css" />
-<link rel="stylesheet" href="/design/font-awesome/css/font-awesome-4.7.0.min.css" type="text/css" />
-<link rel="Shortcut icon" href="/design/favicon.ico" type="image/x-icon" />
-
-<title>Planet - Free Software Foundation Europe</title>
-
-<!--[if lt IE 7]>
-<script defer type="text/javascript" src="http://test.fsfe.org/pngfix.js"></script>
-
-<style type="text/css" media="screen">
-#content {
-	margin-top: -4px;
-}
-</style>
-<![endif]-->
-
-<!--[if lt IE 8]>
-<style type="text/css" media="screen">
-
-#text-top { width: 94%; }
-
-.collumnleft, .collumnright {
-	width: 41.5%;
-}
-
-#newsblog { width: 99%; }
-
-#news {
-	width: 57%
-}
-
-#blog { 
-	width: 38%;
-	margin-right: 1.2%;
-}
-
-</style>
-<![endif]-->
 
 </head>
+<!-- start FSFE header -->
 
 <body>
 
-<div id="wrapper">
-<div id="inner-wrapper">
+<header id="top">
 
-<div id="top">
+<!-- language selection -->
+<div id="topmost">
   <ul id="topleft">
-    <label for="show-menu" class="show-menu"><i class="fa fa-globe
-                                                       fa-lg"></i>Chose language</label>
+    <label for="show-menu" class="show-menu"><i class="fa fa-globe fa-lg"></i>Change planet language</label>
     <input type="checkbox" id="show-menu" />
     <ul id="languages">
       <!-- <li><a href="/da/" title="">Dansk</a></li> -->
@@ -80,113 +45,128 @@
       <li><a href="/sv/" title="">Svenska</a></li>
     </ul>
   </ul>
-
-  <ul id="topright">
-    <!--<li><a href="http://fellowship.fsfe.org/join" title="Join the
-               Fellowship!" class="edge">join</a></li>-->
-    <!--<li><a href="http://fellowship.fsfe.org/contact"
-               title="">contact</a></li>-->
-    <li><a href="https://fsfe.org/" title="Free Software Foundation Europe"
-    class="edge"><i class="fa fa-home fa-lg"></i>Free Software Foundation Europe</a></li>
-    </ul>
 </div><!-- end top -->
 
-
-<div id="contenttop">
-	<div>
-	</div>
-</div><!-- end contenttop -->
-
-<div class="motto">
-  <div class="motto-text">
-    <TMPL_VAR name>
+<nav id="menu" role="navigation">
+  <div id="direct-links">
+    <span>Go to:</span>
+    <a href="#menu-list" id="direct-to-menu-list" data-toggle="collapse" data-target="#menu-list"><i class="fa fa-bars fa-lg"></i>Menu</a>
+    <a href="#content" id="direct-to-content">Content</a>
+    <a href="#full-menu" id="direct-to-full-menu">Sitemap</a>
+    <a href="#source" id="direct-to-source">Page info</a>
+    <a href="https://my.fsfe.org/support" id="direct-to-join"><i class="fa fa-user-plus fa-lg"></i>Become a supporter</a>
+    <a href="https://fsfe.org" id="direct-to-home"><i class="fa fa-home fa-lg"></i>Free Software Foundation&nbsp;Europe</a>
   </div>
+  <ul id="menu-list">
+    <li><a href="https://fsfe.org/about/about.html">About</a></li>
+    <li><a href="https://fsfe.org/work.html">Our Work</a></li>
+    <li><a href="https://fsfe.org/campaigns/campaigns.html">Campaigns</a></li>
+    <li><a href="https://fsfe.org/contribute/contribute.html">Contribute</a></li>
+    <li><a href="https://fsfe.org/press/press.html">Press</a></li>
+  </ul>
+</nav>
+
+<div id="masthead">
+  <div id="link-home"><a href="https://fsfe.org">Home</a></div>
+  <div id="logo"><span>Free Software Foundation Europe</span></div>
+  <div id="motto"><span>Free Software, Free Society!</span></div>
 </div>
+</header>
 
-<div id="content">
+<section id="main">
 
-<div id="text">
-	<div class="blogitem" align="center">
-	<p><a href="/PLANETLANG/rss20.xml"><img src="/images/feed.png" alt="" /> RSS 2.0</a> | <a href="/PLANETLANG/atom.xml"><img src="/images/feed.png" alt="" /> Atom</a> | <a href="/PLANETLANG/foafroll.xml"><img src="/images/foaf.png" alt="" /> FOAF</a> | <a href="/PLANETLANG/opml.xml"><img src="/images/opml.png" alt="" /></a></p>
-	</div>
+  <div class="motto">
+    <div class="motto-text">
+      <TMPL_VAR name>
+    </div>
+  </div>
+
+  <article id="content">
+
+  <div class="blogitem" align="center">
+  <p><a href="/PLANETLANG/rss20.xml"><img src="/images/feed.png" alt="" /> RSS 2.0</a> | <a href="/PLANETLANG/atom.xml"><img src="/images/feed.png" alt="" /> Atom</a> | <a href="/PLANETLANG/foafroll.xml"><img src="/images/foaf.png" alt="" /> FOAF</a> | <a href="/PLANETLANG/opml.xml"><img src="/images/opml.png" alt="" /></a></p>
+  </div>
 
 
 
 <TMPL_LOOP Items>
-	<TMPL_IF new_date>
-		<TMPL_UNLESS __FIRST__>
-		### End <div class="daygroup">
-		</div>
-		</TMPL_UNLESS>
-		<div class="daygroup">
-		<h2 class="date"><TMPL_VAR new_date></h2>
-	</TMPL_IF>
-	
-	<div class="blogitem">
-	<TMPL_IF title>
-		<h2>
-		<a href="<TMPL_VAR link ESCAPE="HTML">" class="blogtitle"><TMPL_VAR title></a> 
-		<TMPL_IF channel_face>
-		<img class="face" src="/faces/<TMPL_VAR channel_face ESCAPE="HTML">" width="<TMPL_VAR channel_facewidth ESCAPE="HTML">" height="<TMPL_VAR channel_faceheight ESCAPE="HTML">" alt="" style="float:right;" />
-		</TMPL_IF>
-		</h2>
-	</TMPL_IF>
-		<p>
-		<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a> | <TMPL_VAR date>
-		</p>
-	<TMPL_VAR content>
-	</div>
+  <TMPL_IF new_date>
+    <TMPL_UNLESS __FIRST__>
+    ### End <div class="daygroup">
+    </div>
+    </TMPL_UNLESS>
+    <div class="daygroup">
+    <h3 class="date"><TMPL_VAR new_date></h3>
+  </TMPL_IF>
+  
+  <div class="blogitem">
+  <TMPL_IF title>
+    <h2>
+    <a href="<TMPL_VAR link ESCAPE="HTML">" class="blogtitle"><TMPL_VAR title></a> 
+    <TMPL_IF channel_face>
+    <img class="face" src="/faces/<TMPL_VAR channel_face ESCAPE="HTML">" width="<TMPL_VAR channel_facewidth ESCAPE="HTML">" height="<TMPL_VAR channel_faceheight ESCAPE="HTML">" alt="" style="float:right;" />
+    </TMPL_IF>
+    </h2>
+  </TMPL_IF>
+    <p>
+      <ul class="archivemeta">
+        <li><a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a></li>
+        <li class="archiveauthor">—</li>
+        <li><TMPL_VAR date></li>
+      </ul>
+    </p>
+  <TMPL_VAR content>
+  </div>
 
-	<TMPL_IF __LAST__>
-	### End <div class="daygroup">
-	</div>
-	</TMPL_IF>
+  <TMPL_IF __LAST__>
+  ### End <div class="daygroup">
+  </div>
+  </TMPL_IF>
 </TMPL_LOOP>
 
 
 
 
 <div class="blogitem" align="center">
-	<p>
-	Planet FSFE (PLANETLANG): <a href="/PLANETLANG/rss20.xml"><img src="/images/feed.png" alt="" /> RSS 2.0</a> | <a href="/PLANETLANG/atom.xml"><img src="/images/feed.png" alt="" /> Atom</a> | <a href="/PLANETLANG/foafroll.xml"><img src="/images/foaf.png" alt="" /> FOAF</a> | <a href="/PLANETLANG/opml.xml"><img src="/images/opml.png" alt="" /></a>
-	</p>
-	<p>
-	<TMPL_LOOP Channels>
-	<img src="/images/feed.png" alt="" /> <a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a>&nbsp;
-	</TMPL_LOOP>
-	</p>
+  <p>
+  Planet FSFE (PLANETLANG): <a href="/PLANETLANG/rss20.xml"><img src="/images/feed.png" alt="" /> RSS 2.0</a> | <a href="/PLANETLANG/atom.xml"><img src="/images/feed.png" alt="" /> Atom</a> | <a href="/PLANETLANG/foafroll.xml"><img src="/images/foaf.png" alt="" /> FOAF</a> | <a href="/PLANETLANG/opml.xml"><img src="/images/opml.png" alt="" /></a>
+  </p>
+  <p>
+  <TMPL_LOOP Channels>
+  <img src="/images/feed.png" alt="" /> <a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a>&nbsp;
+  </TMPL_LOOP>
+  </p>
 </div>
 
+  </article>
+</section>
 
-
-<div id="footer">
-	<address></address>
-	
-	<p>
-	</p>
-
-	<p>
-	Planet FSFE is a blog aggregator; the opinions expressed here do not
-	constitute a statement by the <a href="https://www.fsfe.org">FSFE</a>.
-	Please report problems with this page to contact at fsfe.org.
-	</p>
-	<p>
-	Powered by: 
-	<a href="http://intertwingly.net/code/venus/"><img src="/images/venus.png" border="0" alt="" /></a>
-	</p>
-
-</div><!-- end footer -->
-
-</div><!-- end text -->
-</div><!-- end content -->
-
-<div id="contentbottom">
-	<div>
-	</div>
-</div><!-- end contentbottom -->
-
-</div><!-- end inner-wrapper -->
-</div><!-- end wrapper -->
-
+<footer id="bottom">
+  <section id="legal-info">
+    <p>
+      Run by <a href="https://fsfe.org/">Free Software Foundation Europe</a>.<br />
+      Powered by <a href="http://intertwingly.net/code/venus/"><img src="/images/venus.png" border="0" alt="" /></a>
+    </p>
+    <ul>
+     <li>
+      <a href="https://fsfe.org/contact/contact">Contact us</a>
+     </li>
+     <li>
+      <a href="https://fsfe.org/about/legal/imprint">Imprint</a>
+      /
+      <a href="https://fsfe.org/about/legal/imprint#id-privacy-policy">Privacy Policy</a>
+      /
+      <a href="https://fsfe.org/about/transparency-commitment">Transparency Commitment</a>
+     </li>
+    </ul>
+    <p>
+      Planet FSFE is a blog aggregator; the opinions expressed here do 
+      not constitute a statement by the <a 
+      href="https://fsfe.org">FSFE</a>. Please <a 
+      href="https://fsfe.org/contact/contact">contact us</a> if you 
+      experience problems with this page.
+    </p>
+  </section>
+</footer>
 </body>
 </html>

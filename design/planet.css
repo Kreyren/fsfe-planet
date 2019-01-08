@@ -24,6 +24,7 @@ text-decoration:none;
 color:#000000;
 font-size: 1.4em;
 line-height: 1.4em;
+text-decoration: underline;
 }
 /*
 .blogitem h2 a:hover {
@@ -32,6 +33,13 @@ color:#868686;
 */
 li span {
 background:none;
+}
+
+.newsitem, .blogitem {
+  border-bottom: 1px dotted #515546;
+  padding: 1em;
+  overflow: auto;
+  line-height: 1.5em;
 }
 
 input#show-menu {
@@ -48,7 +56,7 @@ input#show-menu {
 }
 
 .show-menu:hover {
-	color: #236892;
+  color: #236892;
 }
 
 input[type=checkbox]:checked ~ #languages{
@@ -56,41 +64,37 @@ input[type=checkbox]:checked ~ #languages{
 }
 
 ul#languages {
-	position: relative;
-	width: 100%;
-	background: white;
-	display: none;
+  position: relative;
+  width: 100%;
+  background: white;
+  display: none;
         padding-top: 0px;
-	box-shadow: 0 .4em 1em #c8c8c8;
-	z-index: 100;
+  box-shadow: 0 .4em 1em #c8c8c8;
+  z-index: 100;
 }
 
 
 .show-menu {
-	display:block;
+  display:block;
 }
 
 #languages a:hover {
-	border-bottom: none;
+  border-bottom: none;
 }
 
 #languages li a {
-	display: block;
+  display: block;
         position: relative;
-	line-height: 2em;
-}
-
-.fa {
-	padding-right: 0.3em;
+  line-height: 2em;
 }
 
 .motto {
     position:relative;
-    width: 100%;
     background-image: url(/images/motto.jpg);
     min-height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: -1em -3em 0 -3em;
 }
 
 .motto-text {
@@ -106,5 +110,48 @@ ul#languages {
     /*font-family: 'GNUTypewriter',"Inconsolata",Inconsolata,Menlo,Monaco,Consolas,"Courier New",monospace;*/
 }
 
+#topmost {
+  margin: 0;
+  padding: 0;
+}
 
+ul#topright {
+  float: right;
+  position: relative;
+}
 
+ul#topleft {
+  float: left;
+  position: relative;
+}
+
+ul#topright, ul#topleft {
+  margin: 0;
+  padding: 8px 15px 0 10px;
+  height: 39px;
+}
+ul#topright li, ul#topleft li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  list-style-type:none;
+}
+
+#topmost a {
+  padding-left: 25px;
+  font-size: 16px;
+  color: #3394ce;
+  background: transparent;
+  text-decoration: none;
+}
+
+#topmost a.active, #topmost a.special {
+  font-weight: bold;
+}
+
+#topmost a.edge {
+  padding-right: 10px;
+}
+#topmost a:hover {
+  color: #236892;
+}
