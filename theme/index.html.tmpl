@@ -17,6 +17,15 @@
 <link href="https://fsfe.org/graphics/fsfe.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" href="/design/planet.css" type="text/css" />
 
+<script src="https://fsfe.org/scripts/jquery-3.3.1.min.js"></script>
+<script src="https://fsfe.org/scripts/modernizr.custom.65251.js"></script>
+<!--[if lt IE 9]>
+  <script src="https://fsfe.org/scripts/html5shiv.js"></script>
+  <script src="https://fsfe.org/scripts/respond.min.js"></script>
+  <![endif]--><!--[if (lt IE 9) & (!IEMobile)]>
+  <link rel="stylesheet" media="all" href="https://fsfe.org/look/ie.min.css" type="text/css">
+<![endif]-->
+
 </head>
 <!-- start FSFE header -->
 
@@ -50,7 +59,7 @@
 <nav id="menu" role="navigation">
   <div id="direct-links">
     <span>Go to:</span>
-    <a href="#menu-list" id="direct-to-menu-list" data-toggle="collapse" data-target="#menu-list"><i class="fa fa-bars fa-lg"></i>Menu</a>
+    <a href="#menu-list" id="direct-to-menu-list"><i class="fa fa-bars fa-lg"></i>Menu</a>
     <a href="#content" id="direct-to-content">Content</a>
     <a href="#full-menu" id="direct-to-full-menu">Sitemap</a>
     <a href="#source" id="direct-to-source">Page info</a>
