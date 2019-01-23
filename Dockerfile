@@ -8,12 +8,11 @@ RUN sed "s/stretch/testing/g" /etc/apt/sources.list.d/stable.list > /etc/apt/sou
 COPY preferences.d/* /etc/apt/preferences.d/
 
 # update and install packages
-RUN [ "apt-get", "-q", "update" ]
-RUN [ "apt-get", "-qy", "--allow-downgrades", "--allow-remove-essential", "--allow-change-held-packages", "upgrade" ]
-RUN apt-get install -y planet-venus/testing
-RUN apt-get install -y procps cron
-RUN [ "apt-get", "clean" ]
-RUN [ "rm", "-rf", "/var/lib/apt/lists/*", "/tmp/*", "/var/tmp/*" ]
+RUN apt-get -q update && \
+    apt-get -qy --allow-downgrades --allow-remove-essential --allow-change-held-packages upgrade && \
+    apt-get install -y planet-venus/testing procps cron && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Add venus user
 RUN adduser --quiet --disabled-password --shell /bin/bash --home /home/venus --gecos "User" venus
@@ -51,20 +50,7 @@ RUN ln -s en/atom.xml en/foafroll.xml en/index.html en/opml.xml en/rss20.xml .
 ADD https://status.fsfe.org/fsfe.org/ /dev/null
 
 # Initially run all planets
-RUN planet /home/venus/lang/da/planet_da.ini
-RUN planet /home/venus/lang/de/planet_de.ini
-RUN planet /home/venus/lang/en/planet_en.ini
-RUN planet /home/venus/lang/eo/planet_eo.ini
-RUN planet /home/venus/lang/es/planet_es.ini
-RUN planet /home/venus/lang/fi/planet_fi.ini
-RUN planet /home/venus/lang/fr/planet_fr.ini
-RUN planet /home/venus/lang/gmq/planet_gmq.ini
-RUN planet /home/venus/lang/it/planet_it.ini
-RUN planet /home/venus/lang/nl/planet_nl.ini
-RUN planet /home/venus/lang/no/planet_no.ini
-RUN planet /home/venus/lang/sk/planet_sk.ini
-RUN planet /home/venus/lang/sl/planet_sl.ini
-RUN planet /home/venus/lang/sv/planet_sv.ini
+RUN find /home/venus/lang/ -name "planet_*.ini" -exec planet {} \;
 
 # Switch back to root and run cron+Apache
 USER root
