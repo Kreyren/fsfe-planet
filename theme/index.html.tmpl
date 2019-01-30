@@ -107,11 +107,11 @@
     <div class="daygroup">
     <h3 class="date"><TMPL_VAR new_date></h3>
   </TMPL_IF>
-  
+
   <div class="blogitem">
   <TMPL_IF title>
     <h2>
-    <a href="<TMPL_VAR link ESCAPE="HTML">" class="blogtitle"><TMPL_VAR title></a> 
+    <a href="<TMPL_VAR link ESCAPE="HTML">" class="blogtitle"><TMPL_VAR title></a>
     <TMPL_IF channel_face>
     <img class="face" src="/faces/<TMPL_VAR channel_face ESCAPE="HTML">" width="<TMPL_VAR channel_facewidth ESCAPE="HTML">" height="<TMPL_VAR channel_faceheight ESCAPE="HTML">" alt="" style="float:right;" />
     </TMPL_IF>
@@ -154,7 +154,9 @@
   <section id="legal-info">
     <p>
       Run by <a href="https://fsfe.org/">Free Software Foundation Europe</a>.<br />
-      Powered by <a href="http://intertwingly.net/code/venus/"><img src="/images/venus.png" border="0" alt="" /></a>
+      Powered by <a href="http://intertwingly.net/code/venus/"><img src="/images/venus.png" border="0" alt="" /></a><br />
+      The FSFE planet is licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">AGPL-3.0</a> or later.
+      See the <a href="https://git.fsfe.org/fsfe-system-hackers/fsfe-planet" target="_blank">code repository</a> for more info.
     </p>
     <ul>
      <li>
@@ -169,10 +171,10 @@
      </li>
     </ul>
     <p>
-      Planet FSFE is a blog aggregator; the opinions expressed here do 
-      not constitute a statement by the <a 
-      href="https://fsfe.org">FSFE</a>. Please <a 
-      href="https://fsfe.org/contact/contact">contact us</a> if you 
+      Planet FSFE is a blog aggregator; the opinions expressed here do
+      not constitute a statement by the <a
+      href="https://fsfe.org">FSFE</a>. Please <a
+      href="https://fsfe.org/contact/contact">contact us</a> if you
       experience problems with this page.
     </p>
   </section>
