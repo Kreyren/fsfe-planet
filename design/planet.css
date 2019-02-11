@@ -100,7 +100,12 @@ background:none;
     min-height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: -2em -1.5em 0 -1.5em;
+}
+@media (min-width: @screen-md-min) {
+  .motto {
     margin: -1em -3em 0 -3em;
+  }
 }
 
 .motto-text {
