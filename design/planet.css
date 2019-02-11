@@ -42,50 +42,56 @@ background:none;
   line-height: 1.5em;
 }
 
-input#show-menu {
+#language-selection {
+    color: #3394ce;
+    display: inline;
+}
+
+#language-selection ul li {
+    display: inline-block;
+    padding: 10px 8px;
+    text-align: left;
+    position: relative;
+}
+
+/* Select the second li item and make it bold */
+#language-selection ul li:nth-child(2) {
+    font-weight: bold;
+}
+
+/* Make sure the language labels are not bold (esp. the 2nd one) */
+#language-selection ul li #dropdown li {
+    font-weight: normal;
+}
+
+#language-selection li ul {
     display: none;
 }
 
-.show-menu {
-    cursor: pointer;
-    padding-left: 5px;
-    font-size: 16px;
-    color: #3394ce;
-    background: transparent;
-    text-decoration: none;
-}
-
-.show-menu:hover {
-  color: #236892;
-}
-
-input[type=checkbox]:checked ~ #languages{
+/* Padding between language labels */
+#language-selection ul ul li {
+    padding: 5px;
+    font-weight: normal;
     display: block;
 }
 
-ul#languages {
-  position: relative;
-  width: 100%;
-  background: white;
-  display: none;
-        padding-top: 0px;
-  box-shadow: 0 .4em 1em #c8c8c8;
-  z-index: 100;
+#language-selection ul input a,
+#show-menu {
+    display: none;
 }
 
-
-.show-menu {
-  display:block;
+#language-selection label {
+    cursor: pointer;
 }
 
-#languages a:hover {
-  border-bottom: none;
-}
-
-#languages li a {
-  display: block;
-        position: relative;
-  line-height: 2em;
+/* Display the languages when the checkbox (the button Change planet
+ * language) is checked */
+#language-selection input[type=checkbox]:checked ~ li > ul {
+    position: absolute;
+    display: block;
+    left: 50px;
+    background: white;
+    z-index: 100;
 }
 
 .motto {
