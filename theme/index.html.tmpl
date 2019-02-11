@@ -33,38 +33,30 @@
 
 <header id="top">
 
-<!-- language selection -->
-<div id="topmost">
-  <ul id="topleft">
-    <label for="show-menu" class="show-menu"><i class="fa fa-globe fa-lg" style="padding-right:.3em"></i>Change planet language</label>
-    <input type="checkbox" id="show-menu" />
-    <ul id="languages">
-      <!-- <li><a href="/da/" title="">Dansk</a></li> -->
-      <li><a href="/de/" title="">Deutsch</a></li>
-      <li><a href="/" title="">English</a></li>
-      <li><a href="/es/" title="">Espa&ntilde;ol</a></li>
-      <li><a href="/eo/" title="">Esperanto</a></li>
-      <li><a href="/fr/" title="">Fran&ccedil;ais</a></li>
-      <li><a href="/it/" title="">Italiano</a></li>
-      <li><a href="/nl/" title="">Nederlands</a></li>
-      <li><a href="/gmq/" title="">Nordic</a></li>
-      <li><a href="/no/" title="">Norsk</a></li>
-      <li><a href="/fi/" title="">Suomi</a></li>
-      <!-- <li><a href="/sl/" title="">Sloven&#353;&#269;ina</a></li> -->
-      <li><a href="/sv/" title="">Svenska</a></li>
-    </ul>
-  </ul>
-</div><!-- end top -->
-
 <nav id="menu" role="navigation">
-  <div id="direct-links">
-    <span>Go to:</span>
-    <a href="#menu-list" id="direct-to-menu-list"><i class="fa fa-bars fa-lg"></i>Menu</a>
-    <a href="#content" id="direct-to-content">Content</a>
-    <a href="#full-menu" id="direct-to-full-menu">Sitemap</a>
-    <a href="#source" id="direct-to-source">Page info</a>
-    <a href="https://my.fsfe.org/support" id="direct-to-join"><i class="fa fa-user-plus fa-lg"></i>Become a supporter</a>
-    <a href="https://fsfe.org" id="direct-to-home"><i class="fa fa-home fa-lg"></i>Free Software Foundation&nbsp;Europe</a>
+  <div id="language-selection">
+    <ul>
+       <li><i class="fa fa-user-plus fa-lg" style="padding-right:.3em"></i><a href="https://my.fsfe.org/support">Become a supporter</a></li>
+       <input type="checkbox" id="show-menu" />
+       <li><i class="fa fa-globe fa-lg dropdown" style="padding-right:.3em"></i><label for="show-menu">Change planet language</label>
+          <ul id="dropdown">
+            <!-- <li><a href="/da/" title="">Dansk</a></li> -->
+            <li><a href="/de/" title="">Deutsch</a></li>
+            <li><a href="/" title="">English</a></li>
+            <li><a href="/es/" title="">Espa&ntilde;ol</a></li>
+            <li><a href="/eo/" title="">Esperanto</a></li>
+            <li><a href="/fr/" title="">Fran&ccedil;ais</a></li>
+            <li><a href="/it/" title="">Italiano</a></li>
+            <li><a href="/nl/" title="">Nederlands</a></li>
+            <li><a href="/gmq/" title="">Nordic</a></li>
+            <li><a href="/no/" title="">Norsk</a></li>
+            <li><a href="/fi/" title="">Suomi</a></li>
+            <!-- <li><a href="/sl/" title="">Sloven&#353;&#269;ina</a></li> -->
+            <li><a href="/sv/" title="">Svenska</a></li>
+          </ul>
+       </li>
+       <li><i class="fa fa-home fa-lg" style="padding-right:.3em"></i><a href="https://fsfe.org">Free Software Foundation&nbsp;Europe</a></li>
+    </ul>
   </div>
   <ul id="menu-list">
     <li><a href="https://fsfe.org/about/about.html">About</a></li>
