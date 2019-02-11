@@ -8,8 +8,8 @@ services:
     expose:
       - 80
     environment:
-      - VIRTUAL_HOST=planet-test.fsfe.org
-      - LETSENCRYPT_HOST=planet-test.fsfe.org
+      - VIRTUAL_HOST=planet.fsfe.org,www.planet.fsfe.org
+      - LETSENCRYPT_HOST=planet.fsfe.org,www.planet.fsfe.org
       - LETSENCRYPT_EMAIL=contact@fsfe.org
 
   # Connect the container which exposes the service to the 'bridge' network as
