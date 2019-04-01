@@ -29,8 +29,9 @@ COPY httpd.conf /usr/local/apache2/conf/httpd.conf
 
 # Copy directories
 COPY faces /usr/local/apache2/htdocs/faces
-COPY images /usr/local/apache2/htdocs/images
-COPY design /usr/local/apache2/htdocs/design
+COPY graphics /usr/local/apache2/htdocs/graphics
+COPY look /usr/local/apache2/htdocs/look
+COPY fonts /usr/local/apache2/htdocs/fonts
 COPY theme /home/venus/theme
 COPY lang /home/venus/lang
 COPY bin /home/venus/bin

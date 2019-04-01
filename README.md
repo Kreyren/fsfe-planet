@@ -8,14 +8,9 @@ Requirements:
 * [Docker](https://docs.docker.com/install/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
-Save time by commenting out some languages in the [Dockerfile](./Dockerfile):
+Save time on your dev machine by temporarily limiting fetching entries to some languages in the [Dockerfile](./Dockerfile):
 
-    ...
-    # RUN planet /home/venus/lang/da/planet_da.ini
-    RUN planet /home/venus/lang/de/planet_de.ini
-    RUN planet /home/venus/lang/en/planet_en.ini
-    # RUN planet /home/venus/lang/eo/planet_eo.ini
-    ...
+    RUN find /home/venus/lang/ -name "planet_it.ini" -exec planet {} \;
 
 Start the planet by running
 

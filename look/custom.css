@@ -96,7 +96,7 @@ background:none;
 
 .motto {
     position:relative;
-    background-image: url(/images/motto.jpg);
+    background-image: url(/graphics/motto.jpg);
     min-height: 300px;
     background-repeat: no-repeat;
     background-size: cover;

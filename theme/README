@@ -1,6 +1,0 @@
-This folder contain the theme of planet.fsfe.org.
-
-The index will be deployed by a script which runs automatically as a cron job
-of the server. Changes to the css files and to font-awesome need to be deployed
-manually for now. Therefore you have to copy the css files and/or the
-font-awesome directory to the web root of the planet.
