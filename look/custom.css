@@ -166,7 +166,3 @@ ul#topright li, ul#topleft li {
 #topmost a:hover {
   color: #236892;
 }
-
-.svg #logo {
-  background:url(/images/logo_transparent.png) top left no-repeat
-}
