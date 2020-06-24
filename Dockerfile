@@ -2,16 +2,12 @@ FROM httpd:2.4
 
 ENV DEBIAN_FRONTEND=noninteractive LANG=en_US.UTF-8 LC_ALL=C.UTF-8 LANGUAGE=en_US.UTF-8
 
-# Set apt sources and preferences
-RUN mv /etc/apt/sources.list /etc/apt/sources.list.d/stable.list
-RUN sed "s/stretch/testing/g" /etc/apt/sources.list.d/stable.list > /etc/apt/sources.list.d/testing.list
-COPY preferences.d/* /etc/apt/preferences.d/
 
 # update and install packages
 RUN apt-get -q update && \
     apt-get -qy --allow-downgrades --allow-remove-essential --allow-change-held-packages upgrade && \
-    apt-get install -y planet-venus/testing procps cron && \
-    apt clean && \
+    apt-get install -y planet-venus procps cron && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Add venus user
