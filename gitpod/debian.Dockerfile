@@ -33,6 +33,7 @@ RUN true \
 		--create-home --home-dir "/home/gitpod" \
 		--shell "${GITPOD_USER_SHELL:-"/bin/bash"}" \
 		--password "${GITPOD_USER_PASS:-"gitpod"}" \
+		"${GITPOD_USER_NAME:-"gitpod"}" \
 	&& ${SED:-"sed"} -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
 
 # Get hadolint
