@@ -18,6 +18,7 @@ RUN true \
 		docker.io \
 		docker-compose \
 		cargo \
+		sudo \
 	&& ${APT_GET:-"apt-get"} autoremove -qy \
 	&& ${RM:-"rm"} -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
