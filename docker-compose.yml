@@ -10,7 +10,16 @@ services:
     environment:
       - VIRTUAL_HOST=planet.fsfe.org,www.planet.fsfe.org
       - LETSENCRYPT_HOST=planet.fsfe.org,www.planet.fsfe.org
-      - LETSENCRYPT_EMAIL=contact@fsfe.org
+      - service=contact@fsfe.org
+  onion-router:
+      build: .
+      image: onion-service-provider
+      restart: always
+      environment:
+        - ONION_USER="onionguy"
+        - ONION_USER_ID="8167"
+        - ONION_GROUP="onionguy"
+        - ONION_GROUP_ID="8167"
 
   # Connect the container which exposes the service to the 'bridge' network as
   # this is where the reverse proxy is

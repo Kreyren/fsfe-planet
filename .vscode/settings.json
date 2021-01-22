@@ -1,0 +1,115 @@
+{
+  // Render all whitespaces
+  "editor.renderWhitespace": "all",
+
+  // Word Wrap
+  "editor.wordWrap": "on",
+
+  // Handling of whitespaces
+  "code-eol.highlightExtraWhitespace": true,
+  "code-eol.newlineCharacter": "↵",
+  "code-eol.crlfCharacter": "↓",
+
+  // Spell check optimization
+  "cSpell.diagnosticLevel": "Error",
+  "cSpell.allowCompoundWords": true,
+  "cSpell.flagWords": [
+    // DO
+    "kreyen",
+    // NOT
+    "kyren",
+    // MANGLE
+    "keyren",
+    // MY
+    "eyren",
+    // DAMN
+    "kryen",
+    // NAME
+    "kery"
+  ],
+  "cSpell.words": [
+    "Krey",
+    "Hrbek",
+    "kreyren",
+    "FSFE",
+    "hadolint"
+  ],
+
+  // TODO Tree configuration
+  "todo-tree.general.tags": [
+    "FIXME",
+    "TODO",
+    "DNM", // Do Not Merge
+    "DNC", // Do Not Contribute
+    "DNR" // Do Not Release
+  ],
+  // NOTE: Icons has to be valid codicons (https://microsoft.github.io/vscode-codicons/dist/codicon.html)
+  "todo-tree.highlights.customHighlight": {
+    "FIXME": {
+      "foreground": "orange",
+      "icon": "report",
+      "fontWeight": "bold"
+    },
+    "TODO": {
+      "foreground": "turquoise",
+      "icon": "tasklist",
+      "fontWeight": "bold"
+    },
+    "DOCS": {
+      "foreground:": "blue",
+      "icon": "repo",
+      "fontWeight": "bold"
+    },
+    "DNM": {
+      "foreground": "red",
+      "icon": "alert",
+      "fontWeight": "bold"
+    },
+    "DNR": {
+      "foreground": "red",
+      "icon": "alert",
+      "fontWeight": "bold"
+    },
+    "DNC": {
+      "foreground": "red",
+      "icon": "alert",
+      "fontWeight": "bold"
+    }
+  },
+  "todo-tree.regex.regex": "($TAGS)((\\-.*|)\\(.*\\)):",
+
+  // Better comments
+  "better-comments.tags": [
+    {
+        "tag": "!/",
+        "color": "#333333",
+    },
+    {
+        "tag": "@",
+        "color": "#3498DB",
+    },
+    {
+        "tag": "##!",
+        "color": "#bf1332",
+        "bold": true
+    },
+    {
+      "tag": "*",
+      "color": "#32e206",
+      "bold": true
+    }
+  ],
+
+  // JSON specific
+  "[json]": {
+    "editor.tabSize": 2,
+  },
+  "shellcheck.enableQuickFix": true,
+  "shellcheck.run": "onSave",
+  "shellcheck.customArgs": [
+    "--external-sources"
+  ],
+  "cSpell.ignoreWords": [
+    "dind"
+  ],
+}

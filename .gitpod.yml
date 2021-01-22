@@ -1,0 +1,23 @@
+# Enable root access to privileged users
+privileged: true
+
+image:
+    file: gitpod/debian.Dockerfile
+
+github:
+  prebuilds:
+    master: true
+    # enable for pull requests coming from this repo
+    pullRequests: true
+    # add a check to pull requests (defaults to true)
+    addCheck: true
+    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
+    addComment: true
+    # add a "Review in Gitpod" button to the pull request's description (defaults to false)
+    addBadge: true
+    # add a label once the prebuild is ready to pull requests (defaults to false)
+    addLabel: true
+
+tasks:
+  # Prepare the image for development by pre-building the docker
+  before: docker-compose up --build

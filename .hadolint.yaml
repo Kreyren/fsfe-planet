@@ -1,0 +1,8 @@
+ignored:
+  - DL3008 # krey: Pinning specific version on apt is not sane
+
+trustedRegistries:
+  - docker.io
+  - debian
+  - gitpod
+  - hadolint

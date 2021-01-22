@@ -1,0 +1,1 @@
+Configuration for gitpod <https://gitpod.io> the Four Freedom respecting cloud IDE

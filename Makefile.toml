@@ -1,0 +1,75 @@
+###! This is a Makefile designed for cargo-make <https://github.com/sagiegurari/cargo-make> used to manage the project repository
+
+[env]
+# File hierarchy
+PROJECT_DIR = { value = "${PWD}", condition = { env_not_set = ["PROJECT_DIR"] } }
+VENDOR = { value = "${PROJECT_DIR}/vendor",	condition = { env_not_set = ["VENDOR"] } }
+
+HADOLINT = "$VENDOR/hadolint"
+# FIXME-QA(Krey): Implement auto-updates
+HADOLINT_VERSION = "1.19.0" # https://github.com/hadolint/hadolint/releases
+
+# Check
+
+[tasks.hadolint]
+description = "Checks the project files for hadolint violations"
+category = "Check"
+script_runner = "@shell"
+script = '''
+eexecutable $HADOLINT || die false "Command hadolint with env override '$HADOLINT' is not executable in this environment"
+
+for file in $(find "$PROJECT_DIR" -name "*.Dockerfile" -type f); do
+    $HADOLINT "$file"
+done
+'''
+
+# Misc
+
+[tasks.vedordir]
+description = "makes sure that vendordir is available"
+category = "Misc"
+script_runner = "@shell"
+script = '''
+[ -d "$VENDOR" ] || emkdir "$VENDOR"
+'''
+
+# Tools
+
+[tasks.enforced-env]
+description = "Enter enforced environment"
+category = "Tools"
+extend = "vedordir"
+script_runner = "@shell"
+script.pre = '''
+. "$PROJECT_DIR/scripts/99-UNLEASH.sh"
+'''
+
+[tasks.bootstrap-hadolint]
+description = "Bootstrap hadolint for linting"
+category = "Tools"
+extend = "vedordir"
+script_runner = "@shell"
+script = '''
+[ -f "$HADOLINT" ] || edownload https://github.com/hadolint/hadolint/releases/download/v$HADOLINT_VERSION/hadolint-Linux-x86_64 -O "$HADOLINT"
+[ -x "$HADOLINT" ] || echmod +x "$HADOLINT"
+'''
+
+# Deploy
+
+[tasks.deploy]
+description = "Deploy the website in docker environment locally and on onion service"
+category = "Deployment"
+script_runner = "@shell"
+script = '''
+docker-compose up --build
+'''
+
+# Clean
+
+[tasks.clean]
+description = "Clean temporary files and deployed services"
+category = "Clean"
+script_runner = "@shell"
+script = '''
+docker-compose down
+'''
