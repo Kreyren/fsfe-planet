@@ -1,8 +1,5 @@
-# Enable root access to privileged users
-privileged: true
-
 image:
-    file: gitpod/debian.Dockerfile
+  file: gitpod/debian.Dockerfile
 
 github:
   prebuilds:
@@ -20,4 +17,4 @@ github:
 
 tasks:
   # Prepare the image for development by pre-building the docker
-  before: docker-compose up --build
+  - command: docker-compose up --build
