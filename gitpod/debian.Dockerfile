@@ -10,6 +10,19 @@ ENV \
 	HADOLINT_VERSION="${HADOLINT_VERSION:-"1.19.0"}" \
 	HADOLINT="/usr/bin/hadolint"
 
+# HACK(Krey): This is a hack for preview feature to get privileged access in the gitpod <Unable to file bug - banned>
+RUN true \
+	&& ${USERADD:-"useradd"} \
+		# See https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user
+		--no-log-init \
+		--uid "${GITPOD_USER_ID:-"33333"}" \
+		--groups sudo \
+		--create-home --home-dir "/home/gitpod" \
+		--shell "${GITPOD_USER_SHELL:-"/bin/bash"}" \
+		--password "${GITPOD_USER_PASS:-"gitpod"}" \
+	&& ${SED:-"sed"} -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
+
+
 # Get dependencies
 RUN true \
 	&& ${APT_GET:-"apt-get"} update \
